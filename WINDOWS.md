@@ -8,7 +8,7 @@ The overall process is the same — only the installation steps and keyboard sho
 
 ---
 
-## Phase 1: Set Up Your AI Coding Assistant
+## 🛠 Phase 1: Set Up Your AI Coding Assistant
 
 ### Choose Your Tool
 
@@ -16,7 +16,7 @@ Same options as the Mac guide. Pick one:
 
 | Tool | How It Works | Pricing | Best For |
 |------|-------------|---------|----------|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Terminal-based. You type, it codes. | Usage-based (~$5/mo) | People comfortable with Terminal |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Terminal-based. You type, it codes. | Pay-as-you-go | People comfortable with Terminal |
 | [Cursor](https://cursor.com) | VS Code-like editor with built-in AI | Free tier + $20/mo Pro | People who want a visual editor |
 | [GitHub Copilot](https://github.com/features/copilot) | AI inside VS Code | Free for students, $10/mo | VS Code users |
 | [Windsurf](https://windsurf.com) | AI-first code editor | Free tier available | Beginners who want a GUI |
@@ -31,18 +31,18 @@ Same options as the Mac guide. Pick one:
 2. **Install Node.js:** Go to [nodejs.org](https://nodejs.org), download the **LTS** Windows installer (.msi), run it, click "Next" through all the prompts.
 
    After installation, **close and reopen PowerShell**, then verify:
-   ```
+   ```powershell
    node --version
    ```
    You should see something like `v22.x.x`.
 
 3. **Install Claude Code:**
-   ```
+   ```powershell
    npm install -g @anthropic-ai/claude-code
    ```
 
 4. **Launch it:**
-   ```
+   ```powershell
    claude
    ```
 
@@ -87,13 +87,13 @@ Same options as the Mac guide. Pick one:
 
 ---
 
-## Phase 2: Build Your Site Locally
+## 🎨 Phase 2: Build Your Site Locally
 
 ### Step 1: Create a Project Folder
 
 **If using PowerShell (Claude Code):**
 ```powershell
-mkdir ~\Developer\my-website
+mkdir -Force ~\Developer\my-website
 cd ~\Developer\my-website
 ```
 
@@ -123,7 +123,7 @@ After each change, refresh your browser (**Ctrl + R** or **F5**) to see the upda
 
 ---
 
-## Phase 3: Put It Online
+## 🚀 Phase 3: Put It Online
 
 ### Step 5: Install Git and Sign Up for GitHub
 
@@ -132,7 +132,7 @@ After each change, refresh your browser (**Ctrl + R** or **F5**) to see the upda
 1. Go to [git-scm.com](https://git-scm.com) and download Git for Windows
 2. Run the installer — **keep all default settings**, just click "Next" through everything
 3. After installation, **close and reopen PowerShell**, then verify:
-   ```
+   ```powershell
    git --version
    ```
    You should see `git version 2.x.x`.
@@ -165,8 +165,9 @@ Same as the Mac guide — this is all done in your browser:
 2. Authorize Vercel to access your GitHub
 3. Click **"Add New..."** → **"Project"**
 4. Find `my-website` → click **"Import"**
-5. Leave defaults → click **"Deploy"**
-6. Wait ~10 seconds. Done!
+5. If Vercel asks about a "Framework Preset", select **Other** or leave it blank.
+6. Leave defaults → click **"Deploy"**
+7. Wait ~10 seconds. Done!
 
 ### Step 8: Your Site Is Live!
 
@@ -174,16 +175,28 @@ Vercel gives you a URL like `https://my-website-xxxxx.vercel.app`. That's your w
 
 ---
 
-## Phase 4: Custom Domain (Optional)
+## 🌐 Phase 4: Custom Domain (Optional)
 
 Identical to the Mac guide:
 
 1. Buy a domain from **Namecheap** or **Cloudflare** (~$10-15/year)
 2. In Vercel → Settings → Domains → add your domain
-3. Add the DNS records Vercel tells you to at your registrar:
-   - **A record:** `76.76.21.21`
-   - **CNAME:** `www` → `cname.vercel-dns.com`
+3. Add the DNS records Vercel tells you to at your registrar. Copy these exactly — they are unique to your project.
 4. Wait a few minutes to a few hours
+
+---
+
+## Daily Workflow
+
+Whenever you want to update your site:
+
+1. Open PowerShell
+2. `cd ~\Developer\my-website`
+3. Open your AI assistant
+4. Describe what you want to change
+5. Preview in browser (Ctrl + R to refresh)
+6. Say "Push to GitHub"
+7. Site updates in seconds
 
 ---
 
@@ -192,7 +205,7 @@ Identical to the Mac guide:
 | Action | Mac | Windows |
 |--------|-----|---------|
 | Open terminal | Command + Space → "Terminal" | Windows key → "PowerShell" |
-| Create folder | `mkdir -p ~/Developer/my-website` | `mkdir ~\Developer\my-website` |
+| Create folder | `mkdir -p ~/Developer/my-website` | `mkdir -Force ~\Developer\my-website` |
 | Refresh browser | Command + R | Ctrl + R or F5 |
 | Force refresh | Command + Shift + R | Ctrl + Shift + R |
 | Cancel a command | Control + C | Ctrl + C |
@@ -213,8 +226,37 @@ Type `Y` to confirm.
 **Q: `node` or `git` command not found after installing.**
 Close PowerShell and reopen it. Windows needs a fresh terminal to pick up new installs.
 
+**Q: I forgot where I left off.**
+Ask your AI assistant: "Check the current state of this project."
+
+**Q: The browser shows the old version after changes.**
+Press **Ctrl + Shift + R** to force refresh.
+
 **Q: Any other question?**
 Ask your AI assistant. It can help with anything.
+
+---
+
+## What Does It Actually Cost?
+
+| Tool | Cost | What It Does |
+|------|------|-------------|
+| GitHub | Free | Stores your code |
+| Vercel | Free | Hosts your website |
+| AI Assistant | Varies (free tiers available) | Writes code for you |
+| Domain name | ~$10-15/year | Optional |
+
+**Minimum cost to get a site live: $0** if you use an AI tool with a free tier.
+
+---
+
+## Prefer Talking Over Reading?
+
+Install the **[zero-dollar-website-skill](https://github.com/che-3/zero-dollar-website-skill)** for Claude Code — it walks you through the entire process interactively.
+
+```bash
+git clone https://github.com/che-3/zero-dollar-website-skill.git ~/.claude/skills/zero-dollar-website
+```
 
 ---
 

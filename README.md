@@ -1,10 +1,13 @@
 # Your Zero Dollar Website
 
-Build and deploy a personal website without writing a single line of code yourself. An AI assistant does the coding — you just describe what you want in plain language.
+I built my personal website in one afternoon. I didn't write a single line of code — I just told an AI what I wanted, and it built the whole thing. Then I put it online for free.
+
+This guide is exactly how I did it, step by step. If I can do it, you can too.
 
 **[中文版](./README_ZH.md)**
 
 > **On Windows?** Read the [Windows guide](./WINDOWS.md) instead — same process, Windows-specific commands.
+
 > **On Linux?** This Mac guide mostly applies. Your AI assistant can translate any Mac-specific commands for your distro.
 
 ---
@@ -29,15 +32,15 @@ A real website, live on the internet, that you fully own and control. No templat
 ## How It Works
 
 ```
-Phase 1: Set up your AI coding assistant
-Phase 2: Build the site on your computer (AI does the coding)
-Phase 3: Put it on the internet
-Phase 4: Connect a custom domain (optional)
+🛠 Phase 1: Set up your AI coding assistant
+🎨 Phase 2: Build the site on your computer (AI does the coding)
+🚀 Phase 3: Put it on the internet
+🌐 Phase 4: Connect a custom domain (optional)
 ```
 
 ---
 
-## Phase 1: Set Up Your AI Coding Assistant
+## 🛠 Phase 1: Set Up Your AI Coding Assistant
 
 The goal: get an AI assistant running so it can write code for you and help you through every step of this guide.
 
@@ -47,7 +50,7 @@ Pick one. They all work for this guide. You only need one.
 
 | Tool | How It Works | Pricing | Best For |
 |------|-------------|---------|----------|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Terminal-based. You type, it codes. | Usage-based (~$5/mo) | People comfortable with Terminal |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Terminal-based. You type, it codes. | Pay-as-you-go | People comfortable with Terminal |
 | [Cursor](https://cursor.com) | VS Code-like editor with built-in AI | Free tier + $20/mo Pro | People who want a visual editor |
 | [GitHub Copilot](https://github.com/features/copilot) | AI inside VS Code | Free for students, $10/mo | VS Code users |
 | [Windsurf](https://windsurf.com) | AI-first code editor | Free tier available | Beginners who want a GUI |
@@ -61,26 +64,26 @@ Pick one. They all work for this guide. You only need one.
 
 1. **Open Terminal:** Press **Command + Space**, type `Terminal`, hit Enter
 2. **Install Homebrew** (Mac's package manager — makes installing tools easy):
-   ```
+   ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
-   Follow the prompts. If it asks for your Mac password, type it (nothing shows on screen — that's normal).
+   Follow the prompts. If it asks for your Mac password, type it (nothing shows on screen — that's normal). If Homebrew is already installed, the script will tell you — just skip to the next step.
 
    **Important (Apple Silicon Macs — M1/M2/M3/M4):** After Homebrew finishes, it will tell you to run two commands to add it to your PATH. Copy and run both lines it shows you. If you skip this, `brew` won't be recognized.
 3. **Install Node.js:**
-   ```
+   ```bash
    brew install node
    ```
 4. **Install Claude Code:**
-   ```
+   ```bash
    npm install -g @anthropic-ai/claude-code
    ```
    If you get "Permission denied":
-   ```
+   ```bash
    sudo npm install -g @anthropic-ai/claude-code
    ```
 5. **Launch it:**
-   ```
+   ```bash
    claude
    ```
 6. It opens your browser to sign up / log in to Anthropic. Follow the prompts.
@@ -124,14 +127,14 @@ Pick one. They all work for this guide. You only need one.
 
 ---
 
-## Phase 2: Build Your Site Locally
+## 🎨 Phase 2: Build Your Site Locally
 
 The goal: create your website on your own computer and preview it in your browser. Nobody else can see it yet — get it right first.
 
 ### Step 1: Create a Project Folder
 
 **If using Terminal (Claude Code):**
-```
+```bash
 mkdir -p ~/Developer/my-website
 cd ~/Developer/my-website
 ```
@@ -181,11 +184,13 @@ After each change, refresh your browser (**Command + R**) to see the update.
 
 Take your time. No rush.
 
+> **Tip:** If your project folder has files you don't want online (like `.DS_Store`), ask your AI assistant to create a `.gitignore` file.
+
 > **At this point, your site is done on your computer. But only you can see it. Next, we'll put it on the internet.**
 
 ---
 
-## Phase 3: Put It Online
+## 🚀 Phase 3: Put It Online
 
 The goal: make your website accessible to everyone via a URL. Your AI assistant can help with most of this.
 
@@ -196,7 +201,7 @@ The goal: make your website accessible to everyone via a URL. Your AI assistant 
 **Install Git** (Mac usually has it):
 
 Open Terminal and type:
-```
+```bash
 git --version
 ```
 - If you see `git version 2.x.x` — you're good
@@ -222,6 +227,8 @@ git --version
 
 It will configure Git and push for you. You may see a GitHub login popup — log in and authorize.
 
+> If Git asks for a username and password instead of showing a popup, tell your AI assistant: "Help me set up GitHub authentication." It will walk you through it.
+
 If anything goes wrong, paste the error to your AI assistant. It will fix it.
 
 ### Step 7: Deploy with Vercel
@@ -233,6 +240,7 @@ Vercel turns your GitHub code into a live website. Free.
 3. Click **"Add New..."** → **"Project"**
 4. Find `my-website` in the list → click **"Import"**
 5. Leave settings as default → click **"Deploy"**
+   If Vercel asks about a "Framework Preset", select **Other** or leave it blank.
 6. Wait ~10 seconds. Done!
 
 > Can't find your project? Click **"Adjust GitHub App Permissions"** and grant access.
@@ -250,7 +258,7 @@ From now on, whenever you push code to GitHub, Vercel updates your site automati
 
 ---
 
-## Phase 4: Custom Domain (Optional)
+## 🌐 Phase 4: Custom Domain (Optional)
 
 The `.vercel.app` URL works fine. But if you want your own domain (like `yourname.com`), follow these steps whenever you're ready.
 
@@ -266,7 +274,7 @@ Search for your domain, create an account, pay (~$10-15/year for .com).
 
 1. Go to your project on vercel.com → **Settings** → **Domains**
 2. Type your domain → click **Add**
-3. Vercel shows DNS records to add:
+3. Vercel shows DNS records to add. Copy these exactly — they are unique to your project. They will look something like:
    - **A record:** `76.76.21.21`
    - **CNAME:** `www` → `cname.vercel-dns.com`
 4. Add these records in your domain registrar's DNS settings
