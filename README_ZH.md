@@ -4,6 +4,8 @@
 
 **[English](./README.md)**
 
+> **注意：** 本教程基于 macOS 编写。大部分步骤在 Windows/Linux 上也能用，但终端命令和快捷键是 Mac 的。如果你用的是 Windows 或 Linux，可以让 AI 助手帮你翻译对应命令。
+
 ---
 
 ## 这个教程适合谁？
@@ -62,6 +64,8 @@
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
    按提示操作。如果要求输入 Mac 密码，直接打（屏幕不会显示字符，正常的）。
+
+   **重要（Apple Silicon 芯片的 Mac — M1/M2/M3/M4）：** Homebrew 装完后会提示你运行两行命令来配置 PATH。把它显示的两行命令复制粘贴运行。如果跳过这一步，终端会识别不了 `brew` 命令。
 3. **安装 Node.js：**
    ```
    brew install node

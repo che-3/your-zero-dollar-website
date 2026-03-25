@@ -4,6 +4,8 @@ Build and deploy a personal website without writing a single line of code yourse
 
 **[中文版](./README_ZH.md)**
 
+> **Note:** This guide is written for macOS. Most steps work on Windows/Linux too, but the terminal commands and keyboard shortcuts are Mac-specific. If you're on Windows or Linux, your AI assistant can translate the commands for your OS — just ask it.
+
 ---
 
 ## Who Is This For?
@@ -62,6 +64,8 @@ Pick one. They all work for this guide. You only need one.
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
    Follow the prompts. If it asks for your Mac password, type it (nothing shows on screen — that's normal).
+
+   **Important (Apple Silicon Macs — M1/M2/M3/M4):** After Homebrew finishes, it will tell you to run two commands to add it to your PATH. Copy and run both lines it shows you. If you skip this, `brew` won't be recognized.
 3. **Install Node.js:**
    ```
    brew install node
