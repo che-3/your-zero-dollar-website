@@ -4,7 +4,8 @@
 
 **[English](./README.md)**
 
-> **注意：** 本教程基于 macOS 编写。大部分步骤在 Windows/Linux 上也能用，但终端命令和快捷键是 Mac 的。如果你用的是 Windows 或 Linux，可以让 AI 助手帮你翻译对应命令。
+> **用 Windows？** 请看 [Windows 中文版](./WINDOWS_ZH.md) — 流程一样，命令是 Windows 的。
+> **用 Linux？** 这份 Mac 教程基本适用，遇到 Mac 特有的命令让 AI 助手帮你转换即可。
 
 ---
 

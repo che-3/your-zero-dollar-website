@@ -4,7 +4,8 @@ Build and deploy a personal website without writing a single line of code yourse
 
 **[中文版](./README_ZH.md)**
 
-> **Note:** This guide is written for macOS. Most steps work on Windows/Linux too, but the terminal commands and keyboard shortcuts are Mac-specific. If you're on Windows or Linux, your AI assistant can translate the commands for your OS — just ask it.
+> **On Windows?** Read the [Windows guide](./WINDOWS.md) instead — same process, Windows-specific commands.
+> **On Linux?** This Mac guide mostly applies. Your AI assistant can translate any Mac-specific commands for your distro.
 
 ---
 
