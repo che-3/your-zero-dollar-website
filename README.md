@@ -322,6 +322,16 @@ Ask your AI assistant. It can help with anything.
 
 ---
 
+## Prefer Talking Over Reading?
+
+Install the **[zero-dollar-website-skill](https://github.com/che-3/zero-dollar-website-skill)** for Claude Code — it walks you through the entire process interactively. Just say "I want to build a website" and it handles everything.
+
+```bash
+git clone https://github.com/che-3/zero-dollar-website-skill.git ~/.claude/skills/zero-dollar-website
+```
+
+---
+
 ## License
 
 MIT — do whatever you want with this.

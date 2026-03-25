@@ -327,6 +327,16 @@ Vercel 会自动配好 HTTPS，不需要你操心。
 
 ---
 
+## 更喜欢对话而不是阅读？
+
+安装 **[zero-dollar-website-skill](https://github.com/che-3/zero-dollar-website-skill)** 到 Claude Code — 直接说"我想建一个网站"，它会交互式地引导你完成整个流程。
+
+```bash
+git clone https://github.com/che-3/zero-dollar-website-skill.git ~/.claude/skills/zero-dollar-website
+```
+
+---
+
 ## License
 
 MIT — 随便用。
